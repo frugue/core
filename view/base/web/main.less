@@ -2,4 +2,6 @@
 // «Remove "in stock" notice»
 // https://www.upwork.com/d/contracts/19688427
 // https://freelancehunt.com/mailbox/read/thread/2321105
-.catalog-product-view .stock {display: none;}
+// 2018-03-11
+// `!important` is necessary for the mobile version, because it has the rule `display: inline-block`.
+.catalog-product-view .stock {display: none !important;}
