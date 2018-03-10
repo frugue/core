@@ -1,0 +1,1 @@
+A custom module for [frugue.com](https://frugue.com).
