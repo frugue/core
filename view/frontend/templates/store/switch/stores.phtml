@@ -23,10 +23,13 @@
             <?php foreach ($block->getGroups() as $g): ?>
             <?php if (!($g->getId() == $block->getCurrentGroupId())): ?>
                 <li class="switcher-option">
-                    <a href="#"
-                       data-post='<?php /* @escapeNotVerified */ echo $block->getTargetStorePostData($g->getDefaultStore()); ?>'>
-                        <?php echo $block->escapeHtml($g->getName()) ?>
-                    </a>
+                    <a
+						href="#"
+						data-post='<?= $block->getTargetStorePostData($g->getDefaultStore()); ?>'
+					>
+						<?= df_flag_span($g->getDefaultStore()->getCode()) ?>
+						<span><?= $block->escapeHtml($g->getName()) ?></span>
+					</a>
                 </li>
             <?php endif; ?>
             <?php endforeach; ?>
