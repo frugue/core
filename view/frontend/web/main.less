@@ -32,6 +32,22 @@
 				margin: 0;
 			}
 		}
+		@media(max-width: 767px) {
+			position: fixed;
+			right: 0;
+			top: 10px;
+			width: 11em;
+			z-index: 18;
+			.switcher-trigger {
+				padding-left: 0;
+				padding-right: 0;
+				.active {
+					background-color: inherit;
+					color: inherit;
+					outline: none;
+				}
+			}
+		}
 	}
 }
 .flag-icon {
