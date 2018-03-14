@@ -15,6 +15,9 @@
 		float: left;
 		width: 13em;
 		.switcher-options {
+			@media(max-width: 767px) {
+				float: right;
+			}
 			> .switcher-trigger {border: 0;}
 		}
 		.switcher-options.active {
@@ -36,17 +39,27 @@
 		}
 		@media(max-width: 767px) {
 			position: fixed;
-			right: 0;
-			top: 10px;
+			right: 12px;
+			top: 11px;
 			width: 11em;
 			z-index: 18;
 			.switcher-trigger {
+				font-size: 12px;
 				padding-left: 0;
 				padding-right: 0;
-				.active {
+				&.active, &:hover {
 					background-color: inherit;
 					color: inherit;
 					outline: none;
+				}
+			}
+			ul.switcher-dropdown {
+				padding-right: 10px;
+				padding-top: 0;
+				right: 0;
+				width: auto;
+				li {
+					text-align: right;
 				}
 			}
 		}
