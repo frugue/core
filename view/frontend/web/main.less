@@ -1,10 +1,12 @@
-// 2018-03-10
-// «Remove "in stock" notice»
-// https://www.upwork.com/d/contracts/19688427
-// https://freelancehunt.com/mailbox/read/thread/2321105
-// 2018-03-11
-// `!important` is necessary for the mobile version, because it has the rule `display: inline-block`.
-.catalog-product-view .stock {display: none !important;}
+.catalog-product-view {
+	// 2018-03-10
+	// «Remove "in stock" notice»
+	// https://www.upwork.com/d/contracts/19688427
+	// https://freelancehunt.com/mailbox/read/thread/2321105
+	// 2018-03-11
+	// `!important` is necessary for the mobile version, because it has the rule `display: inline-block`.
+	.stock {display: none !important;}
+}
 // 2018-03-12 I have duplicated these styles from the footer.
 .panel-container-wrap {
 	padding-bottom: 0;
@@ -66,3 +68,10 @@
 #switcher-store-trigger .flag-icon + strong {margin-top: 1px;}
 // 2018-03-11 I need `!important` for the mobile version.
 #switcher-store-trigger::after {float: right !important;}
+@media(max-width: 767px) {
+	.df-desktop-only {display: none;}
+	.products-grid .product-item-photo {margin-bottom: 15px;}
+	.toolbar-products {padding-bottom: 15px; margin-bottom: 30px;}
+	.catalog-product-view .page-main.fix-indent {padding-top: 20px;}
+}
+@media(min-width: 768px) {.df-mobile-only {display: none;}}
