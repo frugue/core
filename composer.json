@@ -2,7 +2,7 @@
 	"name": "mage2pro/frugue.com"
 	,"description": "A custom module for frugue.com"
 	,"type": "magento2-module"
-	,"version": "0.1.0"
+	,"version": "0.1.1"
 	,"license": "MIT"
 	,"authors": [{
 		"name": "Dmitry Fedyuk"
