@@ -25,7 +25,10 @@
 	}
 	input.input-text, select, textarea {padding-left: 1em;}
 	input, select {min-height: auto;}
-	input.item_qty {padding: 1px 0;}
+	input {
+		&.google-auto-complete {display: inline-block;}
+		&.item_qty {padding: 1px 0;}
+	}
 	select {height: 36px;}
 }
 .onestepcheckout-index-index .modal-popup .field {text-align: left;}
