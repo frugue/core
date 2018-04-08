@@ -2,7 +2,6 @@
 namespace Dfe\Frugue\Plugin\Store\Block;
 use Magento\Store\Block\Switcher as Sb;
 use Magento\Store\Model\Group as G;
-// 2018-03-11 https://www.upwork.com/d/contracts/19688867
 final class Switcher {
 	/**
 	 * 2018-03-11 https://www.upwork.com/d/contracts/19688867
