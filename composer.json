@@ -10,7 +10,7 @@
 		,"homepage": "https://mage2.pro/users/dmitry_fedyuk"
 		,"role": "Developer"
 	}]
-	,"require": {"mage2pro/core": ">=3.6.13", "mage2pro/flag": ">=1.0.3"}
+	,"require": {"mage2pro/core": ">=3.7.21", "mage2pro/flag": ">=1.0.3"}
 	,"autoload": {"files": ["registration.php"], "psr-4": {"Dfe\\Frugue\\": ""}}
 	,"keywords": ["Magento 2"]
 }
