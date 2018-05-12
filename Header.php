@@ -25,10 +25,15 @@ class Header extends _P {
 	 * https://github.com/magento/magento2/blob/2.2.0/lib/internal/Magento/Framework/View/Element/AbstractBlock.php#L643-L689
 	 * @return string
 	 */
-	final protected function _toHtml() {return df_tag('div', 'header-info dfe-frugue-header',
-		df_tag('div', 'container', df_cc_s(
+	final protected function _toHtml() {return df_tag('div', 'header-info dfe-frugue-header', df_tag(
+		'div', 'container', df_cc_s(
 			'<i class="icon-truck"></i>Need EU shipping?'
-			,'Please <a href="javascript:void(0)"><strong>switch to our EU store</strong></a>.'
-			,'Frugue USA <a href="javascript:void(0)">does not ship to EU</a>.'
-		))) . df_style_inline_hide('.rd-navbar .header-info');}
+			,sprintf('Please <a href="%s" title="%s"><strong>switch to our EU store</strong></a>.',
+				'javascript:void(0)', 'our EU store'
+			)
+			,sprintf('Frugue USA <a href="%s" title="%s">does not ship to EU</a>.',
+				'javascript:void(0)', 'our delivery terms'
+			)
+		)
+	)) . df_style_inline_hide('.rd-navbar .header-info');}
 }
