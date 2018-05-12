@@ -26,6 +26,8 @@ class Header extends _P {
 	 * @return string
 	 */
 	final protected function _toHtml() {return df_tag('div', 'header-info dfe-frugue-header',
-		df_tag('div', 'container', 'TEST')
-	) /*. df_style_inline_hide('.rd-navbar .header-info')*/;}
+		df_tag('div', 'container',
+			'<i class="icon-truck"></i>Need EU shipping? Please <a href="javascript:void(0)"><strong>switch to our EU store</strong></a>.'
+			. ' Frugue USA <a href="javascript:void(0)">does not ship to EU</a>.')
+	) . df_style_inline_hide('.rd-navbar .header-info');}
 }
