@@ -1,6 +1,7 @@
 <?php
 namespace Dfe\Frugue;
 use Magento\Framework\View\Element\AbstractBlock as _P;
+use Magento\Store\Api\StoreResolverInterface as IStoreResolver;
 // 2018-05-12
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Header extends _P {
@@ -29,7 +30,7 @@ class Header extends _P {
 		'div', 'container', df_cc_s(
 			'<i class="icon-truck"></i>Need EU shipping?'
 			,sprintf('Please <a href="%s" title="%s"><strong>switch to our EU store</strong></a>.',
-				'javascript:void(0)', 'our EU store'
+				df_url('stores/store/switch', [IStoreResolver::PARAM_NAME => 'uk']), 'our EU store'
 			)
 			,sprintf('Frugue USA <a href="%s" title="%s">does not ship to EU</a>.',
 				'javascript:void(0)', 'our delivery terms'
