@@ -51,7 +51,7 @@ final class FrontControllerInterface {
 					 */
 					$c = in_array($c, ['AT', 'CH', 'DE']) ? 'de' : (
 						in_array($c, ['BE', 'FR', 'LU']) ? 'fr' : (
-							df_eu($c) ? 'uk' : $c
+							df_eu($c) ? 'uk' : 'us'
 						)
 					);
 					if ($c !== df_store_code()) {
