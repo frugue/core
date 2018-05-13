@@ -25,15 +25,15 @@ final class FrontControllerInterface {
 		$res = null; /** @var Response|null $res */
 		if (df_area_code_is(A::AREA_FRONTEND)) {
 			$s = df_customer_session(); /** @var Session|DfSession $s */
+			if (!($c = $s->getDfeFrugueCountry())) /** @var string $c */ {
+				$s->setDfeFrugueCountry($c = (df_is_localhost() ? 'HR' : df_visitor()->iso2()));
+			}
 			if (!$s->getDfeFrugueRedirected()) {
 				$urlSwitch = 'stores/store/switch';  /** @const string $urlSwitch */
 				if (df_url_path_contains($urlSwitch)) {
 					$s->setDfeFrugueRedirected(true);
 				}
 				else {
-					if (!($c = $s->getDfeFrugueCountry())) /** @var string $c */ {
-						$s->setDfeFrugueCountry($c = 'HR'/*df_visitor()->iso2()*/);
-					}
 					/**
 					 * «При первичном посещении клиента с IP адресом из Германии, Австрии, Швейцарии -
 					 * направляем во frugue Германия.
