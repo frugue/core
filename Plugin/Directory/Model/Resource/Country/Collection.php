@@ -15,19 +15,18 @@ class Collection {
 	 * https://github.com/magento/magento2/blob/2.2.4/app/code/Magento/Directory/Model/ResourceModel/Country/Collection.php#L165-L181
 	 * @param Sb $sb
 	 * @param \Closure $f
-	 * @param null|int|string|Store $s
+	 * @param null|int|string|Store $s [optional]
 	 * @return Sb
 	 */
-	function aroundLoadByStore(Sb $sb, \Closure $f, $s) {
+	function aroundLoadByStore(Sb $sb, \Closure $f, $s = null) {
 		if ('us' !== df_store_code($s)) {
 			$f($s);
 		}
 		else {
 			$m = df_o(AllowedCountries::class); /** @var AllowedCountries $m */
-        	$c = $m->getAllowedCountries(IScope::SCOPE_STORE, $s); /** @var string[] $c */
-			if ($c) {
-				$sb->addFieldToFilter('country_id', ['in' => array_merge($c, df_eu())]);
-			}
+			$sb->addFieldToFilter('country_id', ['in' => array_diff(
+				$m->getAllowedCountries(IScope::SCOPE_STORE, $s), df_eu()
+			)]);
 		}
 		return $sb;
 	}
