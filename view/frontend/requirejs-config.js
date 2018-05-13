@@ -5,9 +5,8 @@
 // «How to override a HTML file using a custom module?»:
 // https://stackoverflow.com/a/37464758
 // https://magento.stackexchange.com/a/117236
-var config = {
-    config: {
-    	// 2018-04-22 «What are requirejs-config.js `mixins`?» https://mage2.pro/t/5297
-        mixins: {'Magento_Theme/js/jquery.rd-navbar': {'Dfe_Frugue/rd-navbar': true}}
-    }
-};
+// 2018-04-22 «What are requirejs-config.js `mixins`?» https://mage2.pro/t/5297
+var config = {config: {mixins: {
+	'Magento_Customer/js/model/customer-addresses': {'Dfe_Frugue/addresses': true}
+	,'Magento_Theme/js/jquery.rd-navbar': {'Dfe_Frugue/rd-navbar': true}
+}}};
