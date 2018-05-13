@@ -62,7 +62,7 @@ final class Shipping extends \Df\Shipping\Method {
 				}
 				break;
 			case 'uk':
-				if ('UK' === $to) {
+				if ('GB' === $to) {
 					$m('uk_domestic_standard', 'Standard delivered (2-3 business days)', 0, 'GBP');
 					$m('uk_domestic_priority', 'Priority delivered (1 business day)', 19.99, 'GBP');
 				}
