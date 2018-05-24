@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\Frugue\Plugin\Directory\Model\Resource\Country;
+namespace Frugue\Core\Plugin\Directory\Model\Resource\Country;
 use Magento\Directory\Model\AllowedCountries;
 use Magento\Directory\Model\ResourceModel\Country\Collection as Sb;
 use Magento\Store\Model\ScopeInterface as IScope;

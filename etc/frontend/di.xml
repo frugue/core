@@ -6,8 +6,8 @@
 <!-- 2018-04-08 https://www.upwork.com/ab/f/contracts/19688421 -->
 	<type name='Magento\Catalog\Block\Product\View\Attributes'>
 		<plugin
-			name='Dfe\Frugue\Plugin\Catalog\Block\Product\View\Attributes'
-			type='Dfe\Frugue\Plugin\Catalog\Block\Product\View\Attributes'
+			name='Frugue\Core\Plugin\Catalog\Block\Product\View\Attributes'
+			type='Frugue\Core\Plugin\Catalog\Block\Product\View\Attributes'
 		/>
 	</type>
 <!-- 2018-05-13
@@ -16,8 +16,8 @@
 https://github.com/mage2pro/frugue.com/issues/4 -->
 	<type name='Magento\Directory\Model\ResourceModel\Country\Collection'>
 		<plugin
-			name='Dfe\Frugue\Plugin\Directory\Model\Resource\Country\Collection'
-			type='Dfe\Frugue\Plugin\Directory\Model\Resource\Country\Collection'
+			name='Frugue\Core\Plugin\Directory\Model\Resource\Country\Collection'
+			type='Frugue\Core\Plugin\Directory\Model\Resource\Country\Collection'
 		/>
 	</type>
 <!-- 2018-04-13
@@ -26,12 +26,12 @@ https://github.com/mage2pro/frugue.com/issues/2
 -->
 	<type name='Magento\Framework\App\FrontControllerInterface'>
 		<plugin
-			name='Dfe\Frugue\Plugin\Framework\App\FrontControllerInterface'
-			type='Dfe\Frugue\Plugin\Framework\App\FrontControllerInterface'
+			name='Frugue\Core\Plugin\Framework\App\FrontControllerInterface'
+			type='Frugue\Core\Plugin\Framework\App\FrontControllerInterface'
 		/>
 	</type>
 <!-- 2018-03-11 https://www.upwork.com/d/contracts/19688867 -->
 	<type name='Magento\Store\Block\Switcher'>
-		<plugin name='Dfe\Frugue\Plugin\Store\Block\Switcher' type='Dfe\Frugue\Plugin\Store\Block\Switcher'/>
+		<plugin name='Frugue\Core\Plugin\Store\Block\Switcher' type='Frugue\Core\Plugin\Store\Block\Switcher'/>
 	</type>
 </config>

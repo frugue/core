@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\Frugue\Plugin\Catalog\Block\Product\View;
+namespace Frugue\Core\Plugin\Catalog\Block\Product\View;
 use Magento\Catalog\Block\Product\View\Attributes as Sb;
 class Attributes {
 	/**

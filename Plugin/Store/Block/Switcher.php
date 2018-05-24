@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\Frugue\Plugin\Store\Block;
+namespace Frugue\Core\Plugin\Store\Block;
 use Magento\Store\Block\Switcher as Sb;
 use Magento\Store\Model\Group as G;
 final class Switcher {

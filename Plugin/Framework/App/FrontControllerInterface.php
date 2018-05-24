@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\Frugue\Plugin\Framework\App;
+namespace Frugue\Core\Plugin\Framework\App;
 use Df\Customer\Model\Session as DfSession;
 use Magento\Customer\Model\Session;
 use Magento\Framework\App\Area as A;

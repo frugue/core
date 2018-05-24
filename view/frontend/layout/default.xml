@@ -3,7 +3,7 @@
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
-	<head><css src='Dfe_Frugue::main.css'/></head>
+	<head><css src='Frugue_Core::main.css'/></head>
 	<body>
 <!-- 2018-05-15
 «Remove the possibility to switch the store's currency by customers»
@@ -13,7 +13,7 @@ https://github.com/mage2pro/frugue.com/issues/6 -->
 I do not use `<move element='store_switcher' destination='top.links' after='header'/>` and
 	<referenceBlock name='store_switcher'>
 		<action method='setTemplate'>
-			<argument name='template' xsi:type='string'>Dfe_Frugue::store/switch/stores.phtml</argument>
+			<argument name='template' xsi:type='string'>Frugue_Core::store/switch/stores.phtml</argument>
 		</action>
 	</referenceBlock>
 because the TemplateMonster Magetique (#62000) design theme uses a conflicting layout rule:
@@ -30,18 +30,8 @@ https://github.com/mage2pro/frugue.com/issues/6 -->
 				before='-'
 				class='Magento\Store\Block\Switcher'
 				name='dfe_store_switcher'
-				template='Dfe_Frugue::store/switch/stores.phtml'
+				template='Frugue_Core::store/switch/stores.phtml'
 			/>
-		</referenceContainer>
-<!-- 2018-05-12
-«Если клиент из ЕС вручную переключился в магазин frugue США,
-геолокатор по ip адресу должен определить, что клиент из страны ЕС
-и в виде всплывающего окна (должна быть возможность его закрыть) или чего-то подобного
-должен сообщить клиенту, что frugue США не обслуживает клиентов из ЕС.
-"Пожалуйста выберите наше европейское подразделение (frugue UK, frugue, DE, frugue FR)".»
-https://github.com/mage2pro/frugue.com/issues/3 -->
-		<referenceContainer name='header.container'>
-			<block before='-' class='Dfe\Frugue\Header' name='Dfe\Frugue\Header'/>
 		</referenceContainer>
 	</body>
 </page>
