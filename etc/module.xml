@@ -8,6 +8,7 @@
 			<module name='Magento_CatalogSearch'/>
 			<module name='Magento_Cms'/>
 			<module name='Magento_Contact'/>
+			<module name='Magento_Customer'/>
 			<module name='Magento_Sales'/>
 			<module name='Magento_Search'/>
 			<module name='Magento_Theme'/>
