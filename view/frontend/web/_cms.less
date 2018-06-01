@@ -3,7 +3,12 @@
 // https://www.upwork.com/ab/f/contracts/20124474
 .cms-page-view {
 	.page-main {padding-top: 2rem;} // 2018-06-01 It is `100px` in the design theme.
-	h1.page-title {margin-bottom: 1.5rem;} // 2018-06-01 It is `36px` in the design theme.
+	h1.page-title {
+		flex-basis: auto; // 2018-06-02 The design theme set it to `66.66667%` for some CMS pages.
+		margin-bottom: 1.5rem; // 2018-06-01 It is `36px` in the design theme.
+		margin-left: 0; // 2018-06-02 The design theme set it to `calc(16.66667% + 8px)` for some CMS pages.
+		max-width: auto; // 2018-06-02 The design theme set it to `66.66667%` for some CMS pages.
+	}
 	caption, h2 {
 		font-size: 1.25rem; // 2018-06-01 It is `1.5rem` in the design theme.
 		margin-bottom: 0.2rem; // 2018-06-01 It is `25px` in the design theme.
