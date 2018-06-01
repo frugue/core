@@ -5,6 +5,7 @@
 >
 	<module name='Frugue_Core' setup_version='0.0.1'>
 		<sequence>
+			<module name='Magento_CatalogSearch'/>
 			<module name='Magento_Sales'/>
 			<module name='Magento_Search'/>
 			<module name='Magento_Theme'/>
