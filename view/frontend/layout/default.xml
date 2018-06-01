@@ -34,6 +34,10 @@ because the TemplateMonster Magetique (#62000) design theme uses a conflicting l
 		<referenceBlock name='header' remove='true'/>
 <!-- 2018-06-01
 «Magento 2 store footer update & content page update»
+https://www.upwork.com/ab/f/contracts/20124474 -->
+		<referenceBlock name='privacy-policy-link' remove='true'/>
+<!-- 2018-06-01
+«Magento 2 store footer update & content page update»
 https://www.upwork.com/ab/f/contracts/20124474
 https://github.com/magento/magento2/blob/2.1.9/app/code/Magento/Sales/view/frontend/layout/default.xml#L16-L23
 -->
