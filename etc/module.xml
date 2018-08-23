@@ -12,6 +12,10 @@
 			<module name='Magento_Sales'/>
 			<module name='Magento_Search'/>
 			<module name='Magento_Theme'/>
+<!-- 2018-08-23
+"Remove the «Ajax Wishlist» heading from the wishlist update confirmation popup"
+https://github.com/frugue/core/issues/18 -->
+			<module name='TemplateMonster_AjaxWishlist'/>
 		</sequence>
 	</module>
 </config>

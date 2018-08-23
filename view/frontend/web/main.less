@@ -3,3 +3,10 @@
 @import '_customer';
 @import '_product';
 @import '_products';
+// 2018-08-23
+// "Remove the «Ajax Wishlist» heading from the wishlist update confirmation popup"
+// https://github.com/frugue/core/issues/18
+.modal-popup .modal-inner-wrap {
+	margin-bottom: 0;
+	padding-bottom: 15px; // 2018-08-23 It is 30px by default.
+}
