@@ -6,10 +6,20 @@
 		padding-top: 12px !important;
 		legend {display: none;}
 	}
-	// 2018-08-22
-	// "Fix the «Order Total» caption positioning on the checkout page"
-	// https://github.com/frugue/core/issues/9
-	.opc-block-summary .table-totals .grand .mark {padding-right: 30px !important;}
+	.opc-block-summary table.table-totals {
+		// 2018-08-23 For mobile view: https://github.com/frugue/core/issues/9#issuecomment-415042815
+		th, td {display: table-cell;}
+		td {padding: 20px 0 20px 20px;}
+		th {padding: 0 30px 0 0; vertical-align: middle; width: auto;}
+		@media (max-width: 768px) {
+			th, td {padding-bottom: 0; padding-top: 0.8em; vertical-align: bottom;}
+			tr:last-child {th, td {padding-bottom: 0.5em;}}
+		}
+		// 2018-08-22
+		// "Fix the «Order Total» caption positioning on the checkout page"
+		// https://github.com/frugue/core/issues/9
+		.grand .mark {padding-right: 30px !important;}
+	}
 	// 2018-04-06
 	// "Fix the «Shipping Methods» block position on the checkout page":
 	// https://github.com/mage2pro/frugue.com/issues/1
