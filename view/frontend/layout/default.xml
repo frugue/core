@@ -3,7 +3,10 @@
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
-	<head><css src='Frugue_Core::main.css'/></head>
+	<head>
+		<css src='Frugue_Core::main.css'/>
+		<script src='Frugue_Core::main.js' defer='defer'/>
+	</head>
 	<body>
 <!-- 2018-06-01
 «Magento 2 store footer update & content page update»
