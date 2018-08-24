@@ -14,6 +14,11 @@ require(['jquery'], function($) {$(function() {
 	if ('undefined' != typeof MutationObserver) {
 		var observer = new MutationObserver(function() {resize();});
 		var target = document.querySelector('.header a.compare');
-		observer.observe(target, {attributes: true});
+		// 2018-08-25
+		// «Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'»
+		// https://github.com/frugue/core/issues/32
+		if (target) {
+			observer.observe(target, {attributes: true});
+		}
 	}
 });});
