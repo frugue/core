@@ -8,6 +8,10 @@
 		<script src='Frugue_Core::main.js' defer='defer'/>
 	</head>
 	<body>
+<!-- 2018-08-25
+1) "Disable the product comparison feature" https://github.com/frugue/core/issues/31
+2) It removes the sidebar comparison block. -->
+		<referenceBlock name='catalog.compare.sidebar' remove='true'/>
 <!-- 2018-06-01
 «Magento 2 store footer update & content page update»
 https://www.upwork.com/ab/f/contracts/20124474
@@ -50,5 +54,10 @@ https://github.com/magento/magento2/blob/2.1.9/app/code/Magento/Search/view/fron
 «Remove the possibility to switch the store's currency by customers»
 https://github.com/mage2pro/frugue.com/issues/6 -->
 		<referenceBlock name='store.settings.currency' remove='true'/>
+<!-- 2018-08-25
+1) "Disable the product comparison feature" https://github.com/frugue/core/issues/31
+2) It removes the comparison button from the frontend product view
+(but not from the frontend product list). -->
+		<referenceBlock name='view.addto.compare' remove='true' />   		
 	</body>
 </page>
