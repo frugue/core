@@ -10,6 +10,10 @@
 	<body>
 <!-- 2018-08-25
 1) "Disable the product comparison feature" https://github.com/frugue/core/issues/31
+2) It removes the «Compare Products» item from the top menu. -->
+		<referenceBlock name='catalog.compare.link' remove='true'/>
+<!-- 2018-08-25
+1) "Disable the product comparison feature" https://github.com/frugue/core/issues/31
 2) It removes the sidebar comparison block. -->
 		<referenceBlock name='catalog.compare.sidebar' remove='true'/>
 <!-- 2018-06-01
