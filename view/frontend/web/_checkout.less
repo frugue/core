@@ -48,6 +48,21 @@
 		&.item_qty {padding: 1px 0;}
 	}
 	select {height: 36px;}
+	// 2018-09-02
+	// "Fix the quantity buttons positioning on the frontend mobile checkout screen":
+	// https://github.com/frugue/core/issues/33
+	@media only screen and (max-width: 736px) {table#checkout-review-table .qty-wrapper {min-width: 83px;}}
+	@media (max-width: 767px) {
+		.opc-block-summary {
+			.minicart-items {
+				.cart-price {vertical-align: super;}
+				.product-item-detail {
+					padding-left: 0 !important;
+					.product-item-name {padding-top: 0;}
+				}
+			}
+		}
+	}
 }
 // 2018-08-22
 // "Fix address fields positioning on the checkout page"
