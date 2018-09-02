@@ -8,3 +8,18 @@
 		padding: 16px !important;
 	}}
 }
+// 2018-09-02
+// "Improve the chosen options appearance on the «My Wish List» page"
+// https://github.com/frugue/core/issues/22
+.wishlist-index-index .product-item-tooltip {
+	> .details {display: none;} // 2018-09-02 «See Details»
+	> .content {
+		> .subtitle {display: none;} // 2018-09-02 «Options Details»
+		dl {
+			overflow: hidden;
+			width: 100%;
+			dt {float: left;}
+			dd {margin-left: 30%; padding-left: 0;}
+		}
+	}
+}
