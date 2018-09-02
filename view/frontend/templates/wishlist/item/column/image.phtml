@@ -1,0 +1,12 @@
+<?php
+use Magento\Catalog\Model\Product as P;
+use Magento\Wishlist\Block\Customer\Wishlist\Item\Column\Image as B;
+use Magento\Wishlist\Model\Item as I;
+/** @var B $block */
+$b = $block; /** @var B $b */
+$i = $b->getItem(); /* @var I $i */
+$pp = df_wishlist_item_candidates($i); /** @var P[] $pp */
+$p = 1 === count($pp) ? df_first($pp) : $i->getProduct(); /** @var P $p */
+echo df_tag('a', [
+	'class'	=> 'product-item-photo', 'href' => $b->getProductUrl($i), 'title' => $b->escapeHtml($p->getName())
+], $b->getImage($p, 'wishlist_thumbnail')->toHtml());

@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<page 
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
+>
+	<body>
+<!-- 2018-09-02
+"Translate the chosen options names on the «My Wish List» page"
+https://github.com/frugue/core/issues/23 -->
+		<referenceBlock name='customer.wishlist.item.image'>
+			<action method='setTemplate'>
+				<argument name='template' xsi:type='string'
+				>Frugue_Core::wishlist/item/column/image.phtml</argument>
+			</action>
+		</referenceBlock>
+	</body>
+</page>
