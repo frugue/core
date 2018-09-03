@@ -5,9 +5,21 @@
 	.catalog-product-view .page-main.fix-indent {padding-top: 20px;}
 }
 @media(min-width: 768px) {.df-mobile-only {display: none;}}
+// 2018-09-03
+// "Move the «Add to Wish List» button to the same position as in victoriassecret.com"
+// https://github.com/frugue/core/issues/30
+@media (min-width: 992px) {.products-grid .product-items:not(.owl-carousel) .product-item {
+	margin-bottom: 25px; padding-bottom: 25px;
+}}
 // 2018-08-25 "Disable the product comparison feature" https://github.com/frugue/core/issues/31
 a.tocompare {display: none !important;}
-// 2018-08-24
-// "Remove the «Add to Cart» button from the frontend product list"
-// https://github.com/frugue/core/issues/29
-.catalog-category-view .actions-primary {display: none;}
+.catalog-category-view {
+	// 2018-08-24
+	// "Remove the «Add to Cart» button from the frontend product list"
+	// https://github.com/frugue/core/issues/29
+	.actions-primary {display: none;}
+	// 2018-09-03
+	// "Move the «Add to Wish List» button to the same position as in victoriassecret.com"
+	// https://github.com/frugue/core/issues/30
+	.actions-secondary > .towishlist {float: right; margin: 0; right: 10px; top: 35px; z-index: 2;}
+}

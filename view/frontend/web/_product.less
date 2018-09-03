@@ -7,8 +7,7 @@
 	// `!important` is necessary for the mobile version, because it has the rule `display: inline-block`.
 	.stock {display: none !important;}
 	#additional {
-		border: 0;
-		margin-top: 0;
+		border: 0; margin-top: 0;
 		#product-attribute-specs-table {
 			td {padding-left: 0;}
 			@media (max-width: 768px) {
@@ -19,5 +18,12 @@
 			}
 			th {display: none;}
 		}
+	}
+	// 2018-09-03
+	// "Move the «Add to Wish List» button to the same position as in victoriassecret.com"
+	// https://github.com/frugue/core/issues/30
+	.product.media .product-addto-links {
+		display: block; font-size: 22px;
+		.towishlist {float: right; margin: 0; right: 10px; top: 10px; z-index: 2;}
 	}
 }

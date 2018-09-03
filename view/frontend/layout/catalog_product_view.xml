@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<page 
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
+>
+	<body>
+<!-- 2018-09-03
+'Move the «Add to Wish List» button to the same position as in victoriassecret.com':
+https://github.com/frugue/core/issues/30 -->
+		<referenceContainer name='product.info.media'>
+			<block
+				as='addto'
+				before='product.info.media.image'
+				class='Magento\Catalog\Block\Product\View'
+				name='frugue.product.info.addto'
+				template='product/view/addto.phtml'
+			>
+			</block>
+		</referenceContainer>
+		<move destination='frugue.product.info.addto' element='view.addto.wishlist'/>
+		<move
+			before='frugue.product.info.addto'
+			destination='product.info.media'
+			element='product.info.mobile.view.price.stock'
+		/>
+	</body>
+</page>
