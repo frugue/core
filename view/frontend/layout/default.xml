@@ -62,6 +62,14 @@ https://github.com/mage2pro/frugue.com/issues/6 -->
 1) "Disable the product comparison feature" https://github.com/frugue/core/issues/31
 2) It removes the comparison button from the frontend product view
 (but not from the frontend product list). -->
-		<referenceBlock name='view.addto.compare' remove='true' />   		
+		<referenceBlock name='view.addto.compare' remove='true' />
+<!-- 2018-09-04
+"Fix the «In den Warenkorb» button appearance in the «Mein Wunschzettel» block"
+https://github.com/frugue/core/issues/25 -->
+		<referenceBlock name='wishlist_sidebar'>
+			<action method='setTemplate'>
+				<argument name='template' xsi:type='string'>Frugue_Core::wishlist/sidebar.phtml</argument>
+			</action>
+		</referenceBlock>
 	</body>
 </page>
