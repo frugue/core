@@ -2,3 +2,8 @@
 // "Install and configure the Amasty's «Advanced Search» module"
 // https://github.com/frugue/core/issues/28
 .amsearch-products .towishlist {display: none;}
+// 2018-09-10
+// 1) "The main menu has stopped working after the Amasty's «Advanced Search» module installation"
+// https://github.com/frugue/core/issues/37
+// 2) The module uses `z-index: 999`. I restore it to the theme's value.
+.block.block-search, .form .search-autocomplete {z-index: -1 !important;}
