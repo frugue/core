@@ -6,4 +6,7 @@
 // 1) "The main menu has stopped working after the Amasty's «Advanced Search» module installation"
 // https://github.com/frugue/core/issues/37
 // 2) The module uses `z-index: 999`. I restore it to the theme's value.
-.block.block-search, .form .search-autocomplete {z-index: -1 !important;}
+.block.block-search, .form .search-autocomplete {
+	z-index: -1 !important;
+	&.active {z-index: 20 !important;}
+}
