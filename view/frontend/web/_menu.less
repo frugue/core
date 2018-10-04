@@ -1,0 +1,16 @@
+// 2018-10-04  «Improve the main menu layout»: https://github.com/frugue/core/issues/12
+.container {
+	@media (max-width: 1199px) and (min-width: 768px) {  flex-wrap: nowrap !important;}
+	> a.logo {@media (min-width: 1200px) {width: 195px !important;}}
+	> nav.navigation {
+		@media (max-width: 1199px) and (min-width: 768px) {order: 0 !important;}
+		.rd-navbar-nav {
+			text-align: center;
+			> li {&.first {margin-left: 0.8em;} &.last {margin-right: 0;}}
+		}
+	}
+}
+@media (max-width: 1199px) and (min-width: 768px) {
+	.rd-navbar-static .rd-navbar-nav {border-top: 0; margin-top: 1em; padding-top: 0;}
+}
+
