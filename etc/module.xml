@@ -24,6 +24,7 @@ https://github.com/frugue/core/issues/30 -->
 "Remove the «Ajax Wishlist» heading from the wishlist update confirmation popup"
 https://github.com/frugue/core/issues/18 -->
 			<module name='TemplateMonster_AjaxWishlist'/>
+			<module name='TemplateMonster_FilmSlider'/>
 		</sequence>
 	</module>
 </config>
