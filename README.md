@@ -3,6 +3,7 @@ A custom module for [frugue.com](https://frugue.com).
 ## How to install
 ```
 bin/magento maintenance:enable
+composer clear-cache
 composer require frugue/core:*
 bin/magento setup:upgrade
 rm -rf var/di var/generation generated/code && bin/magento setup:di:compile
@@ -13,6 +14,7 @@ bin/magento maintenance:disable
 ## How to upgrade
 ```
 bin/magento maintenance:enable
+composer clear-cache
 composer update frugue/core
 bin/magento setup:upgrade
 rm -rf var/di var/generation generated/code && bin/magento setup:di:compile
