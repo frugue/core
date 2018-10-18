@@ -1,7 +1,8 @@
 <?php
 namespace Frugue\Core\Plugin\Catalog\Block\Product\View;
 use Magento\Catalog\Block\Product\View\Attributes as Sb;
-class Attributes {
+// 2018-04-08
+final class Attributes {
 	/**
 	 * 2018-04-08 https://www.upwork.com/ab/f/contracts/19688421
 	 * @see \Magento\Catalog\Block\Product\View\Attributes::getAdditionalData()
