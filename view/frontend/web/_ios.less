@@ -1,0 +1,5 @@
+// 2018-10-29
+// «Prevent Safari on iPhone from automatically zooming of controls»:
+// https://github.com/frugue/core/issues/49
+// https://stackoverflow.com/a/16255670
+@media screen and (-webkit-min-device-pixel-ratio:0) {input, select, textarea {&, &:focus {font-size: 16px;}}}
