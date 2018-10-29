@@ -4,6 +4,15 @@
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
 	<body>
+<!-- 2018-10-29 «Add a bra size chart to product pages»: https://github.com/frugue/core/issues/46 -->
+		<referenceBlock name='product.info.options.wrapper'>
+			<block
+				after='product.info.options'
+				class='Frugue\Core\Block\SizeChartLink'
+				name='frugue.size-chart-link'
+			>
+			</block>
+		</referenceBlock>
 <!-- 2018-09-03
 'Move the «Add to Wish List» button to the same position as in victoriassecret.com':
 https://github.com/frugue/core/issues/30 -->

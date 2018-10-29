@@ -17,6 +17,15 @@
 	h2 {margin-top: 1.25rem;}
 	p {margin-bottom: 0.5rem;}
 	table {margin: 1.25rem 0;}
-	td, th {&:not(:first-child) {padding-left: 2rem;}}
 	th {font-weight: bold;}
+	&.cms-shipping .column.main table {
+		td, th {&:not(:first-child) {padding-left: 2rem;}}
+	}
+	// 2018-10-29 Add a bra size chart to product pages»: https://github.com/frugue/core/issues/46
+	&.cms-size-conversion-chart .column.main table {
+		td, th {padding: 0.2rem 0.5rem;}
+		td {border: 1px solid rgb(234, 233, 233);}
+		tr:first-child, tr.frugue-delimiter + tr {td {font-weight: 550;}}
+		tr.frugue-delimiter td {border: 0; line-height: 50%;}
+	}
 }

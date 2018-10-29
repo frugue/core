@@ -1,11 +1,4 @@
 .catalog-product-view {
-	// 2018-03-10
-	// «Remove "in stock" notice»
-	// https://www.upwork.com/d/contracts/19688427
-	// https://freelancehunt.com/mailbox/read/thread/2321105
-	// 2018-03-11
-	// `!important` is necessary for the mobile version, because it has the rule `display: inline-block`.
-	.stock {display: none !important;}
 	#additional {
 		border: 0; margin-top: 0;
 		#product-attribute-specs-table {
@@ -19,6 +12,12 @@
 			th {display: none;}
 		}
 	}
+	// 2018-10-29 Add a bra size chart to product pages»: https://github.com/frugue/core/issues/46
+	.product-options-wrapper {
+		margin-bottom: 30px;
+		a.frugue-size-conversion-chart-link {color: #dbb879; display: block; font-size: 12px;}
+		.swatch-opt {margin-bottom: 0;}
+	}
 	// 2018-09-03
 	// "Move the «Add to Wish List» button to the same position as in victoriassecret.com"
 	// https://github.com/frugue/core/issues/30
@@ -26,4 +25,11 @@
 		display: block; font-size: 22px;
 		.towishlist {float: right; margin: 0; right: 10px; top: 10px; z-index: 2;}
 	}
+	// 2018-03-10
+	// «Remove "in stock" notice»
+	// https://www.upwork.com/d/contracts/19688427
+	// https://freelancehunt.com/mailbox/read/thread/2321105
+	// 2018-03-11
+	// `!important` is necessary for the mobile version, because it has the rule `display: inline-block`.
+	.stock {display: none !important;}
 }
