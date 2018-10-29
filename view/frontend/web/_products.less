@@ -21,16 +21,33 @@ a.tocompare {display: none !important;}
 // So I use a more universal selector.
 // Another solution is to use the `.catalog-category-view, .catalogsearch-result-index` selector.
 .page-products {
-	// 2018-08-24
-	// "Remove the «Add to Cart» button from the frontend product list"
-	// https://github.com/frugue/core/issues/29
-	// 2018-09-04
-	// I have added the `.column.main` prefix to preserver the «Add to Cart» button in the sidebar.
-	.column.main .actions-primary {display: none;}
-	// 2018-09-03
-	// "Move the «Add to Wish List» button to the same position as in victoriassecret.com"
-	// https://github.com/frugue/core/issues/30
-	.actions-secondary > .towishlist {float: right; margin: 0; right: 10px; top: 35px; z-index: 2;}
+	.page-main {
+		// 2018-10-29 «Remove the product list toolbar»: https://github.com/frugue/core/issues/52
+		padding-top: 2.5rem; @media(max-width: 767px) {padding-top: 1rem;}
+		// 2018-09-03
+		// "Move the «Add to Wish List» button to the same position as in victoriassecret.com"
+		// https://github.com/frugue/core/issues/30
+		.actions-secondary > .towishlist {float: right; margin: 0; right: 10px; top: 35px; z-index: 2;}
+		// 2018-08-24
+		// "Remove the «Add to Cart» button from the frontend product list"
+		// https://github.com/frugue/core/issues/29
+		// 2018-09-04
+		// I have added the `.column.main` prefix to preserver the «Add to Cart» button in the sidebar.
+		.column.main .actions-primary {display: none;}
+		// 2018-10-29 «Remove the product list toolbar»: https://github.com/frugue/core/issues/52
+		.page-title {margin-bottom: 1rem;}
+		// 2018-10-29
+		// I need the `#amasty-shopby-product-list >` selector, because the page contains 2 toolbars:
+		// at the top, and and the bottom. The bottom one should be preserved on the screen.
+		#amasty-shopby-product-list > .toolbar-products {
+			// 2018-10-29
+			// We can not remove the `.toolbar-products` block for small screens,
+			// because it contains the «Filter» button in such screens.
+			@media(min-width: 768px) {display: none;}
+			border: 0; margin-bottom: 1rem; padding-bottom: 0;
+			.toolbar-sorter {display: none;}
+		}
+	}
 }
 // 2018-09-04
 // "Fix the «In den Warenkorb» button appearance in the «Mein Wunschzettel» block"
