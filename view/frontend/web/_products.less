@@ -39,6 +39,9 @@ a.tocompare {display: none !important;}
 		// 2018-10-29
 		// I need the `#amasty-shopby-product-list >` selector, because the page contains 2 toolbars:
 		// at the top, and and the bottom. The bottom one should be preserved on the screen.
+		// 2018-10-30
+		// Now the bottom's toolbar is removed too (but by another rule):
+		// https://github.com/frugue/core/issues/54
 		#amasty-shopby-product-list > .toolbar-products {
 			// 2018-10-29
 			// We can not remove the `.toolbar-products` block for small screens,
@@ -47,6 +50,9 @@ a.tocompare {display: none !important;}
 			border: 0; margin-bottom: 1rem; padding-bottom: 0;
 			.toolbar-sorter {display: none;}
 		}
+		// 2018-10-30
+		// «Remove the bottom's toolbar from products lists»: https://github.com/frugue/core/issues/54
+		.toolbar-bottom {display: none;}
 	}
 }
 // 2018-09-04
