@@ -9,5 +9,6 @@
 	<body>
 		<referenceBlock name='amasty.scroll.init' remove='true'/>
 		<referenceBlock name='amasty.scroll.prevnext' remove='true'/>
+		<referenceBlock name='paypal.express-in-context.component' remove='true'/>
 	</body>
 </page>
