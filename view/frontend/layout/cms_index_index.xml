@@ -4,11 +4,35 @@
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
 	<head>
-		<remove src='Amasty_Scroll::css/amscroll.css'/>		
+		<css src='css/home.css' />
+		<remove src='Amasty_Scroll::css/amscroll.css'/>
+		<remove src='css/font-awesome.css' />
+		<remove src='css/grid.css' />
+		<remove src='css/linearicons.css' />
+		<remove src='css/material-icons.css' />
+		<remove src='css/modules.css' />
+		<remove src='css/style.css' />
 	</head>
 	<body>
 		<referenceBlock name='amasty.scroll.init' remove='true'/>
 		<referenceBlock name='amasty.scroll.prevnext' remove='true'/>
 		<referenceBlock name='paypal.express-in-context.component' remove='true'/>
+		<referenceBlock name='authentication-popup'>
+			<arguments>
+				<argument name='jsLayout' xsi:type='array'>
+					<item name='components' xsi:type='array'>
+						<item name='authenticationPopup' xsi:type='array'>
+							<item name='children' xsi:type='array'>
+								<item name='captcha' xsi:type='array'>
+									<item name='config' xsi:type='array'>
+										<item name='componentDisabled' xsi:type='boolean'>true</item>
+									</item>
+								</item>
+							</item>
+						</item>
+					</item>
+				</argument>
+			</arguments>
+		</referenceBlock>		
 	</body>
 </page>
