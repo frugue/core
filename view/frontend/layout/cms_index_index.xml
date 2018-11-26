@@ -17,22 +17,6 @@
 		<referenceBlock name='amasty.scroll.init' remove='true'/>
 		<referenceBlock name='amasty.scroll.prevnext' remove='true'/>
 		<referenceBlock name='paypal.express-in-context.component' remove='true'/>
-		<referenceBlock name='authentication-popup'>
-			<arguments>
-				<argument name='jsLayout' xsi:type='array'>
-					<item name='components' xsi:type='array'>
-						<item name='authenticationPopup' xsi:type='array'>
-							<item name='children' xsi:type='array'>
-								<item name='captcha' xsi:type='array'>
-									<item name='config' xsi:type='array'>
-										<item name='componentDisabled' xsi:type='boolean'>true</item>
-									</item>
-								</item>
-							</item>
-						</item>
-					</item>
-				</argument>
-			</arguments>
-		</referenceBlock>		
+		<referenceBlock name='authentication-popup' remove='true'/>
 	</body>
 </page>
