@@ -32,5 +32,15 @@ https://github.com/frugue/core/issues/30 -->
 			destination='product.info.media'
 			element='product.info.mobile.view.price.stock'
 		/>
+<!-- 2019-03-25 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+1) «Upgrade Magento 2 from 2.1.9 to 2.3.0»: https://www.upwork.com/ab/f/contracts/21810726
+2) My fix removes the links:
+*) «Skip to the end of the images gallery»
+*) «Skip to the beginning of the images gallery»
+https://github.com/magento/magento2/blob/2.3.0/app/code/Magento/Catalog/view/frontend/layout/catalog_product_view.xml#L116-L123
+https://github.com/magento/magento2/blob/2.3.0/app/code/Magento/Catalog/view/frontend/layout/catalog_product_view.xml#L125-L132
+-->
+		<referenceContainer name='skip_gallery_after.wrapper' remove='true'/>
+		<referenceContainer name='skip_gallery_before.wrapper' remove='true'/>
 	</body>
 </page>
