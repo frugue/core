@@ -12,6 +12,31 @@
 			th {display: none;}
 		}
 	}
+	// 2019-03-27
+	// «Upgrade Magento 2 from 2.1.9 to 2.3.0»: https://www.upwork.com/ab/f/contracts/21810726
+	// Previously, these styles were applied to the `.container` sub-block of the `.breadcrumbs` block:
+	// https://code.dmitry-fedyuk.com/upwork/frugue.com/blob/de1c4be8f7958c81fab3826409430ae3d811d314/app/design/frontend/TemplateMonster/theme007/web/css/grid.css#L184
+	// But Magento 2.2 and 2.3 does not contain the `.container` sub-block :
+	// https://github.com/magento/magento2/blob/2.3.0/app/code/Magento/Catalog/view/frontend/templates/product/breadcrumbs.phtml#L10
+	// So I apply these styles to the `ul.items` subblock.
+	.breadcrumbs > ul.items {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 480px;
+		min-width: 300px;
+		padding-left: 15px;
+		padding-right: 15px;
+		@media (min-width: 768px) {max-width: 750px;}
+		@media (min-width: 992px) {max-width: 970px;}
+		@media (min-width: 1200px) {max-width: 1200px;}
+		@media (min-width: 1354px) {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 1404px;
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+	}
 	// 2018-10-29 Add a bra size chart to product pages»: https://github.com/frugue/core/issues/46
 	.product-options-wrapper {
 		margin-bottom: 30px;
