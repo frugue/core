@@ -59,4 +59,23 @@
 	// 2018-03-11
 	// `!important` is necessary for the mobile version, because it has the rule `display: inline-block`.
 	.stock {display: none !important;}
+	// 2019-03-28 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+	// 1) «Upgrade Magento 2 from 2.1.9 to 2.3.0»: https://www.upwork.com/ab/f/contracts/21810726
+	// 2) Magento 2.1.9 uses the following code
+	// to hide the selected configuration value on te frontend product view page:
+	// https://github.com/magento/magento2/blob/2.1.9/app/code/Magento/Swatches/view/frontend/web/js/swatch-renderer.js#L482
+	// This code was removed in Magento 2.1.10:
+	// https://github.com/magento/magento2/blob/2.1.10/app/code/Magento/Swatches/view/frontend/web/js/swatch-renderer.js#L594-L603
+	// It was removed by the following commit:
+	// https://github.com/magento/magento2/commit/cd6c087e
+	// The commit provides a new solution to hide the control:
+	// https://github.com/magento/magento2/blob/2.1.10/app/code/Magento/Swatches/view/frontend/web/css/swatches.css#L280-L284
+	// I have replicated this solution in my code below.
+	// It seems that we cannot use just `display:none` because of the following comment:
+	// https://github.com/magento/magento2/blob/2.1.9/app/code/Magento/Swatches/view/frontend/web/js/swatch-renderer.js#L468
+	.swatch-input.super-attribute-select {
+		left: -1000px;
+		position: absolute;
+		visibility: hidden;
+	}
 }
