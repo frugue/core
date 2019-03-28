@@ -29,7 +29,7 @@ https://github.com/mage2pro/frugue.com/issues/4 -->
 	</type>
 <!-- 2019-03-27 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
 «Upgrade Magento 2 from 2.1.9 to 2.3.0»: https://www.upwork.com/ab/f/contracts/21810726
-Magento > 2.1 forces swatches dimensions from the therme's etc/view.xml file.
+Magento > 2.1 forces swatches dimensions from the theme's etc/view.xml file.
 We want to preserve different swatches dimensions for the frontend product list and product view pages,
 so we need this plugin. -->
 	<type name='Magento\Swatches\Helper\Media'>
