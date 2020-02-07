@@ -4,6 +4,7 @@
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
 	<head>
+<!-- 2020-02-07 TemplateMonster/theme007 does not load `_module.less` files. -->
 		<css src='Frugue_Core::main.css'/>
 		<script src='Frugue_Core::main.js' defer='defer'/>
 	</head>
