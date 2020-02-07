@@ -64,6 +64,40 @@
 			}
 		}
 	}
+	// 2020-02-07 I removed some gaps.
+	.create-account-block {margin-bottom: 0 !important; > .field.choice {margin-bottom: 0 !important;} }
+	/**
+	 * 2020-02-07
+	 * 1) "A checkbox is missing for the «Create account» label on the frontend checkout screen":
+	 * https://github.com/frugue/site/issues/11
+	 * 2) "A checkbox is missing for the «My billing and shipping addresses are the same» label
+	 * on the frontend checkout screen": https://github.com/frugue/site/issues/12
+	 * 3) I have implemented the proper styles by analogy with the «Save for later use» checkbox:
+	 * https://github.com/frugue/site/issues/11
+	 */
+	.field.choice input[type=checkbox] {
+		& + label {
+			// 2020-02-07
+			// "Increase font size for the «Create account» and «My billing and shipping addresses are the same»
+			// labels on the frontend checkout screen": https://github.com/frugue/site/issues/13
+			font-size: 16px; line-height: 18px;
+			&:before {
+				color: #dbb879;
+				content: '\e835';
+				display: inline-block;
+				font-family: 'Material Icons';
+				font-style: normal;
+				font-weight: normal;
+				height: 18px;
+				padding-right: 3px;
+				text-align: center;
+				vertical-align: baseline;
+				width: 18px;
+				box-sizing: border-box;
+			}
+		}
+		&:checked + label:before {content: '\e834';}
+	}
 }
 // 2018-08-22
 // "Fix address fields positioning on the checkout page"
