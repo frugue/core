@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+<page 
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
+>
+	<body>
+<!-- 2020-02-07
+I removed the «Please enter your details below to complete your purchase.» label
+because it seems to be reduntant: https://github.com/frugue/site/issues/23 -->
+		<referenceContainer name='page.main.description' remove='true'/>
+	</body>
+</page>
