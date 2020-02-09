@@ -1,0 +1,30 @@
+.opc-block-summary table.table-totals {
+	// 2018-08-23 For mobile view: https://github.com/frugue/core/issues/9#issuecomment-415042815
+	th, td {display: table-cell;}
+	td {padding: 20px 0 20px 20px;}
+	th {padding: 0 30px 0 0; vertical-align: middle; width: auto;}
+	@media (max-width: 768px) {
+		th, td {padding-bottom: 0; padding-top: 0.8em; vertical-align: bottom;}
+		tr:last-child {th, td {padding-bottom: 0.5em;}}
+	}
+	// 2018-08-22
+	// "Fix the «Order Total» caption positioning on the checkout page"
+	// https://github.com/frugue/core/issues/9
+	.grand .mark {padding-right: 30px !important;}
+}
+// 2018-09-02
+// "Fix the quantity buttons positioning on the frontend mobile checkout screen":
+// https://github.com/frugue/core/issues/33
+@media only screen and (max-width: 736px) {table#checkout-review-table .qty-wrapper {min-width: 83px;}}
+@media (max-width: 767px) {
+	.opc-block-summary {
+		.minicart-items {
+			.cart-price {vertical-align: super;}
+			.product-item-detail {
+				padding-left: 0 !important;
+				.product-item-name {padding-top: 0;}
+			}
+			.qty-wrapper > .button-action {margin-top: -1px;}
+		}
+	}
+}

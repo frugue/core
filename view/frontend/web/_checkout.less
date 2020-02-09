@@ -6,40 +6,10 @@
 		padding-top: 12px !important;
 		legend {display: none;}
 	}
-	.opc-block-summary table.table-totals {
-		// 2018-08-23 For mobile view: https://github.com/frugue/core/issues/9#issuecomment-415042815
-		th, td {display: table-cell;}
-		td {padding: 20px 0 20px 20px;}
-		th {padding: 0 30px 0 0; vertical-align: middle; width: auto;}
-		@media (max-width: 768px) {
-			th, td {padding-bottom: 0; padding-top: 0.8em; vertical-align: bottom;}
-			tr:last-child {th, td {padding-bottom: 0.5em;}}
-		}
-		// 2018-08-22
-		// "Fix the «Order Total» caption positioning on the checkout page"
-		// https://github.com/frugue/core/issues/9
-		.grand .mark {padding-right: 30px !important;}
-	}
-	// 2018-04-06
-	// "Fix the «Shipping Methods» block position on the checkout page":
-	// https://github.com/mage2pro/frugue.com/issues/1
-	#opc-shipping_method {
-		margin-top: 0; padding-top: 0;
-		.table-checkout-shipping-method {
-			tr {
-				display: table-row;
-				td {
-					display: table-cell;
-					&.col-carrier {display: none;}
-					&.col-method {cursor: pointer; padding: 0;}
-					input.radio {margin-top: 0;}
-				}
-			}
-		}
-	}
-	// 2018-08-22
-	// "Fix address fields positioning on the checkout page"
-	// https://github.com/frugue/core/issues/10
+	@import 'checkout/_totals';
+	@import 'checkout/_shipping-method';
+	@import 'checkout/_payment-method';
+	// 2018-08-22 "Fix address fields positioning on the checkout page" https://github.com/frugue/core/issues/10
 	.field .label, .field label {margin-right: 0 !important;}
 	input.input-text, select, textarea {padding-left: 1em;}
 	input, select {min-height: auto;}
@@ -48,22 +18,6 @@
 		&.item_qty {padding: 1px 0;}
 	}
 	select {height: 36px;}
-	// 2018-09-02
-	// "Fix the quantity buttons positioning on the frontend mobile checkout screen":
-	// https://github.com/frugue/core/issues/33
-	@media only screen and (max-width: 736px) {table#checkout-review-table .qty-wrapper {min-width: 83px;}}
-	@media (max-width: 767px) {
-		.opc-block-summary {
-			.minicart-items {
-				.cart-price {vertical-align: super;}
-				.product-item-detail {
-					padding-left: 0 !important;
-					.product-item-name {padding-top: 0;}
-				}
-				.qty-wrapper > .button-action {margin-top: -1px;}
-			}
-		}
-	}
 	// 2020-02-07 I removed some gaps.
 	.create-account-block {margin-bottom: 0 !important; > .field.choice {margin-bottom: 0 !important;} }
 	/**
