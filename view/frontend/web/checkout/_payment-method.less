@@ -1,5 +1,11 @@
 // 2020-02-09
-#checkout-step-payment {
+#checkout-step-payment .payment-method {
+	padding-bottom: 0.5em; padding-top: 0.5em;
+	.checkout-agreements-block {padding: 0;}
+	fieldset > .field {
+		margin-bottom: 0.25em;
+		&:last-of-type {margin-bottom: 0;}
+	}
 	// 2020-02-09
 	// "The question icon is misaligned in the payment information block of the frontend checkout page":
 	// https://github.com/frugue/site/issues/14
