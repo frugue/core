@@ -1,4 +1,26 @@
 // 2020-02-09
-// "The «Save for later use» checkbox is misaligned with other controls of the frontend Braintree payment form"
-// https://github.com/frugue/site/issues/28
-#checkout-step-payment .field.choice > input[type=checkbox] {display: none;}
+#checkout-step-payment {
+	// 2020-02-09
+	// "The question icon is misaligned in the payment information block of the frontend checkout page":
+	// https://github.com/frugue/site/issues/14
+	.field-tooltip {
+		bottom: auto !important;
+		margin-top: 0;
+		top: 0 !important;
+		> .field-tooltip-action > span {display: none;} // 2020-02-09 I hide the «What is this?» text.
+	}
+	// 2020-02-09
+	// "The «Save for later use» checkbox is misaligned with other controls of the frontend Braintree payment form"
+	// https://github.com/frugue/site/issues/28
+	.field.choice {
+		> input[type=checkbox] {display: none;}
+		> .field-tooltip {display: inline-block; margin-left: 0.5em; position: static;}
+	}
+	// 2020-02-09
+	// "The question icon is misaligned in the payment information block of the frontend checkout page":
+	// https://github.com/frugue/site/issues/14
+	.field.cvv {
+		.field-tooltip {left: 3.5em; top: 3px !important;}
+		.hosted-control {width: 3em;}
+	}
+}
