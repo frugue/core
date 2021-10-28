@@ -11,6 +11,14 @@ final class Session extends \Df\Core\Session {
 	function country($v = DF_N) {return df_prop($this, $v, []);}
 
 	/**
+	 * 2018-04-13, 2021-10-28
+	 * @used-by \Frugue\Store\Plugin\Framework\App\FrontControllerInterface::aroundDispatch()
+	 * @param bool|string $v [optional]
+	 * @return $this|bool
+	 */
+	function redirected($v = DF_N) {return df_prop($this, $v, []);}
+
+	/**
 	 * 2021-10-28
 	 * @override
 	 * @see \Df\Core\Session::c()
