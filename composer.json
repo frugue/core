@@ -1,6 +1,6 @@
 {
 	"name": "frugue/core"
-	,"version": "0.8.2"
+	,"version": "0.8.3"
 	,"description": "A custom module for frugue.com"
 	,"type": "magento2-module"
 	,"homepage": "https://github.com/frugue/core"
@@ -11,7 +11,7 @@
 		,"homepage": "https://mage2.pro/users/dmitry_fedyuk"
 		,"role": "Developer"
 	}]
-	,"require": {"mage2pro/core": ">=7.8.8"}
+	,"require": {"mage2pro/core": ">=7.8.9"}
 	,"autoload": {"files": ["registration.php"], "psr-4": {"Frugue\\Core\\": ""}}
 	,"keywords": ["Magento 2"]
 }
