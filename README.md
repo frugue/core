@@ -1,4 +1,4 @@
-A custom module for [frugue.com](https://frugue.com).
+A custom module for [frugue.com](https://frugue.com) (Magento 2).
 
 ## How to install
 ```                  
